@@ -1,17 +1,3 @@
-/**
- * Title: Write a program using JavaScript on User Model
- * Author: Hasibul Islam
- * Portfolio: https://devhasibulislam.vercel.app
- * Linkedin: https://linkedin.com/in/devhasibulislam
- * GitHub: https://github.com/devhasibulislam
- * Facebook: https://facebook.com/devhasibulislam
- * Instagram: https:/instagram.com/devhasibulislam
- * Twitter: https://twitter.com/devhasibulislam
- * Pinterest: https://pinterest.com/devhasibulislam
- * WhatsApp: https://wa.me/8801906315901
- * Telegram: devhasibulislam
- * Date: 16, November 2023
- */
 
 import { Schema, models, model } from "mongoose";
 import { genSaltSync, hashSync, compare } from "bcryptjs";
@@ -39,6 +25,10 @@ const userSchema = new Schema(
         default: "https://placehold.co/300x300.png",
       },
       public_id: {
+        type: String,
+        default: "N/A",
+      },
+      originalName: {
         type: String,
         default: "N/A",
       },

@@ -13,7 +13,7 @@
  * Date: 06, February 2024
  */
 
-const { travelloApi } = require("../travello");
+const { travelloApi } = require("../kuarmonia");
 
 const paymentApi = travelloApi.injectEndpoints({
   endpoints: (build) => ({

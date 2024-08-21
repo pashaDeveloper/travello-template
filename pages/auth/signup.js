@@ -1,17 +1,4 @@
-/**
- * Title: Write a program using JavaScript on Signup
- * Author: Hasibul Islam
- * Portfolio: https://devhasibulislam.vercel.app
- * Linkedin: https://linkedin.com/in/devhasibulislam
- * GitHub: https://github.com/devhasibulislam
- * Facebook: https://facebook.com/devhasibulislam
- * Instagram: https://instagram.com/devhasibulislam
- * Twitter: https://twitter.com/devhasibulislam
- * Pinterest: https://pinterest.com/devhasibulislam
- * WhatsApp: https://wa.me/8801906315901
- * Telegram: devhasibulislam
- * Date: 08, November 2023
- */
+
 
 import Button from "@/components/shared/button/Button";
 import LoadImage from "@/components/shared/image/LoadImage";
@@ -186,13 +173,3 @@ const Signup = () => {
 
 export default Signup;
 
-/**
- * How to Multipart File Upload Using FormData with React Hook Form
- * https://refine.dev/blog/how-to-multipart-file-upload-with-react-hook-form/
- *
- * React hook form: How to can I use onChange on React Hook Form Version 7.0
- * https://stackoverflow.com/questions/66936135/react-hook-form-how-to-can-i-use-onchange-on-react-hook-form-version-7-0
- *
- * API resolved without sending a response in Next.Js
- * https://stackoverflow.com/questions/60684227/api-resolved-without-sending-a-response-in-nextjs
- */

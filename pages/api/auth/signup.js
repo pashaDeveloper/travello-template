@@ -1,18 +1,3 @@
-/**
- * Title: Write a program using JavaScript on Signup
- * Author: Hasibul Islam
- * Portfolio: https://devhasibulislam.vercel.app
- * Linkedin: https://linkedin.com/in/devhasibulislam
- * GitHub: https://github.com/devhasibulislam
- * Facebook: https://facebook.com/devhasibulislam
- * Instagram: https://instagram.com/devhasibulislam
- * Twitter: https://twitter.com/devhasibulislam
- * Pinterest: https://pinterest.com/devhasibulislam
- * WhatsApp: https://wa.me/8801906315901
- * Telegram: devhasibulislam
- * Date: 16, November 2023
- */
-
 import { signUpUser } from "@/controllers/auth.controller";
 import upload from "@/middleware/upload.middleware";
 
@@ -29,17 +14,28 @@ export default function handler(req, res) {
       try {
         upload.single("avatar")(req, res, async (err) => {
           if (err) {
-            return res.send({
+            console.error("Upload Error: ", err.message);
+            return res.status(400).json({
               success: false,
               message: err.message,
             });
           }
 
-          const result = await signUpUser(req);
-          res.send(result);
+          try {
+            // ارسال نام اصلی فایل از req.body به تابع signUpUser
+            const result = await signUpUser(req);
+            res.status(200).json(result);
+          } catch (signUpError) {
+            console.error("SignUp Error: ", signUpError.message);
+            res.status(500).json({
+              success: false,
+              message: signUpError.message,
+            });
+          }
         });
       } catch (error) {
-        res.send({
+        console.error("Handler Error: ", error.message);
+        res.status(500).json({
           success: false,
           message: error.message,
         });
@@ -47,7 +43,7 @@ export default function handler(req, res) {
       break;
 
     default:
-      res.send({
+      res.status(405).json({
         success: false,
         message: "Method not allowed",
       });

@@ -1,50 +1,39 @@
-/**
- * Title: Write a program using JavaScript on Upload Middleware
- * Author: Hasibul Islam
- * Portfolio: https://devhasibulislam.vercel.app
- * Linkedin: https://linkedin.com/in/devhasibulislam
- * GitHub: https://github.com/devhasibulislam
- * Facebook: https://facebook.com/devhasibulislam
- * Instagram: https:/instagram.com/devhasibulislam
- * Twitter: https://twitter.com/devhasibulislam
- * Pinterest: https://pinterest.com/devhasibulislam
- * WhatsApp: https://wa.me/8801906315901
- * Telegram: devhasibulislam
- * Date: 16, November 2023
- */
-
 import multer from "multer";
-import { CloudinaryStorage } from "multer-storage-cloudinary";
-import { v2 as cloudinary } from "cloudinary";
+import path from "path";
+import crypto from "crypto";
 
-/* cloudinary config */
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET,
-  secure: true,
-});
+// تنظیمات ذخیره‌سازی محلی
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    // مسیر پوشه که در درخواست ارسال شده است
+    const uploadFolder = req.body.folder || 'uploads';
+    cb(null, path.join(process.cwd(), 'public', uploadFolder));
+  },
+  filename: (req, file, cb) => {
+    // نام فایل
+    const prefix = req.body.prefix || '';
+    const hashedName = crypto.randomBytes(16).toString('hex'); // ایجاد نام هش‌شده
+    const originalName = file.originalname.replace(/[^\w\s.-]/g, "").replace(/\s+/g, "-").toLowerCase();
+    const filename = `${prefix}_${hashedName}${path.extname(file.originalname)}`;
 
-// configure multer storage
-const storage = new CloudinaryStorage({
-  cloudinary: cloudinary,
-  params: async (_, file) => {
-    return {
-      folder: "travello-template",
-      public_id: `${Date.now()}_${file.originalname
-        .replace(/[^\w\s.-]/g, "")
-        .replace(/\s+/g, "-")
-        .toLowerCase()}`,
-    };
+    // ایجاد مسیر نسبی و ذخیره آن در req.body
+    const relativePath = path.join(req.body.folder || 'uploads', filename).replace(/\\/g, "/");
+
+    // فراخوانی callback با نام فایل
+    cb(null, filename);
+
+    // ذخیره نام اصلی فایل و مسیر نسبی در req.body برای استفاده در هنگام ثبت‌نام
+    req.body.originalName = originalName;
+    req.body.filePath = relativePath;
   },
 });
 
+// ایجاد نمونه `multer` با تنظیمات بالا
 const upload = multer({
   storage,
   fileFilter: (_, file, cb) => {
-    const supportedImage = /jpg|jpeg|png/i; // Adjusted regex for case-insensitive matching
-    const originalname = file.originalname;
-    const extension = originalname.substring(originalname.lastIndexOf(".") + 1);
+    const supportedImage = /jpg|jpeg|png/i;
+    const extension = path.extname(file.originalname).toLowerCase();
 
     if (supportedImage.test(extension)) {
       cb(null, true);

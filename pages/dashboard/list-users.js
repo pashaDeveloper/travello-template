@@ -1,17 +1,4 @@
-/**
- * Title: Write a program using JavaScript on List Users
- * Author: Hasibul Islam
- * Portfolio: https://devhasibulislam.vercel.app
- * Linkedin: https://linkedin.com/in/devhasibulislam
- * GitHub: https://github.com/devhasibulislam
- * Facebook: https://facebook.com/devhasibulislam
- * Instagram: https://instagram.com/devhasibulislam
- * Twitter: https://twitter.com/devhasibulislam
- * Pinterest: https://pinterest.com/devhasibulislam
- * WhatsApp: https://wa.me/8801906315901
- * Telegram: devhasibulislam
- * Date: 16, November 2023
- */
+
 
 import LoadImage from "@/components/shared/image/LoadImage";
 import Table from "@/components/shared/loading/Table";
@@ -32,7 +19,7 @@ const ListUsers = () => {
   const usr = useSelector((state) => state?.auth);
   const users = useMemo(() => data?.data || [], [data]);
   const dispatch = useDispatch();
-
+console.log(users)
   useEffect(() => {
     if (error?.data) {
       alert(error?.data?.message);
@@ -85,7 +72,6 @@ const ListUsers = () => {
                     <tr className="bg-white hover:bg-secondary/50 transition-colors">
                       <td
                         scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
                       >
                         <LoadImage
                           src={user?.avatar?.url}

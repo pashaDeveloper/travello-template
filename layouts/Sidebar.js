@@ -1,17 +1,4 @@
-/**
- * Title: Write a program using JavaScript on Sidebar
- * Author: Hasibul Islam
- * Portfolio: https://devhasibulislam.vercel.app
- * Linkedin: https://linkedin.com/in/devhasibulislam
- * GitHub: https://github.com/devhasibulislam
- * Facebook: https://facebook.com/devhasibulislam
- * Instagram: https://instagram.com/devhasibulislam
- * Twitter: https://twitter.com/devhasibulislam
- * Pinterest: https://pinterest.com/devhasibulislam
- * WhatsApp: https://wa.me/8801906315901
- * Telegram: devhasibulislam
- * Date: 25, January 2024
- */
+
 
 import LoadImage from "@/components/shared/image/LoadImage";
 import Link from "next/link";
@@ -55,13 +42,13 @@ const Sidebar = ({ routes }) => {
             window.open("/", "_self");
           }}
         >
-          <LoadImage
+          {/* <LoadImage
             src={user?.avatar?.url}
             alt={user?.avatar?.public_id}
             height={30}
             width={30}
             className="rounded-secondary object-cover w-[30px] h-[30px]"
-          />
+          /> */}
           <article className="flex flex-col gap-y-0.5">
             <h2 className="line-clamp-1 text-base">{user?.name}</h2>
             <span className="text-xs">Logout</span>

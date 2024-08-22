@@ -34,28 +34,28 @@ console.log(users)
             <thead className="text-xs text-gray-700 uppercase bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-3">
-                  Avatar
+                  پروفایل
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Name
+                  نام 
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Email
+                  ایمیل
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Phone
+                  موبایل
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Hotels
+                  سفارشات
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Role
+                  نقش
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Status
+                  وضعیعت
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Actions
+                  عملکرد
                 </th>
               </tr>
             </thead>

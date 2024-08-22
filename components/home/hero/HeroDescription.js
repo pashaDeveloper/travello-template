@@ -1,45 +1,69 @@
-/**
- * Title: Write a program using JavaScript on BannerDescription
- * Author: Hasibul Islam
- * Portfolio: https://devhasibulislam.vercel.app
- * Linkedin: https://linkedin.com/in/devhasibulislam
- * GitHub: https://github.com/in/devhasibulislam
- * Facebook: https://facebook.com/in/devhasibulislam
- * Instagram: https://instagram.com/in/devhasibulislam
- * Twitter: https://twitter.com/in/devhasibulislam
- * Pinterest: https://pinterest.com/in/devhasibulislam
- * WhatsApp: https://wa.me/8801906315901
- * Telegram: devhasibulislam
- * Date: 16, August 2023
- */
-
+import React, { useState, useEffect } from "react";
 import Button from "@/components/shared/button/Button";
 import HighlightText from "@/components/shared/highlightText/HighlightText";
-import React from "react";
+
+const TypingText = ({ text, speed }) => {
+  const [displayText, setDisplayText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isBlinking, setIsBlinking] = useState(true);
+
+  useEffect(() => {
+    // Typing effect
+    const typingInterval = setInterval(() => {
+      setDisplayText((prev) => prev + text[index]);
+      setIndex((prev) => prev + 1);
+    }, speed);
+
+    if (index >= text.length) {
+      clearInterval(typingInterval);
+    }
+
+    return () => clearInterval(typingInterval);
+  }, [index, text, speed]);
+
+  useEffect(() => {
+    // Blinking cursor effect
+    const blinkInterval = setInterval(() => {
+      setIsBlinking((prev) => !prev);
+    }, 500);
+
+    return () => clearInterval(blinkInterval);
+  }, []);
+
+  return (
+    <span>
+      {displayText}
+      <span className={`cursor ${isBlinking ? 'blink' : ''}`}>|</span>
+    </span>
+  );
+};
 
 const HeroDescription = () => {
   return (
     <section className="lg:col-span-8 md:col-span-6">
       <article className="flex flex-col gap-y-12">
         <div className="flex flex-col gap-y-8">
-          <h1 className="lg:text-7xl md:text-5xl text-3xl whitespace-normal">
-            Transform Your Dreams Into Your{" "}
-            <HighlightText>Memory</HighlightText>
-          </h1>
-          <p className="text-base">
-            Discover breathtaking destinations, vibrant cultures, and
-            unforgettable experiences. <br /> Our expert team creates
-            personalized itineraries tailored to your interests. <br /> Let us
-            inspire and guide you as you create timeless memories through the
-            joy of travel.
+          <p className="lg:text-7xl md:text-5xl text-3xl ">
+            <HighlightText>با کوارمونیا</HighlightText>
+            <TypingText
+              text=" آینده‌ای روشن در کشوری جدید"
+              speed={50} 
+            // Typing speed in milliseconds
+            />
+          </p>
+          <p className=" lg:text-2xl md:text-1xl text-1lg">
+            <TypingText
+              text="آغاز سفر جدید شما با یک کلیک! از خانه به سرزمین‌های جدید، با اطمینان و راحتی"
+              speed={30} // Typing speed in milliseconds
+            />
           </p>
         </div>
         <div>
-          <Button
-            className="px-[18px] py-[13px]"
+        <Button
+            className="px-[18px] py-[13px] w-[200px] bg-black"
             onClick={() => window.open("/tours", "_self")}
           >
-            Explore Now
+           کلیک کن
           </Button>
         </div>
       </article>

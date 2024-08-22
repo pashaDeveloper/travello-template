@@ -34,8 +34,8 @@ const Advantage = () => {
         <section className="w-full h-full flex flex-col gap-y-12">
           <div className="flex flex-col gap-y-12">
             <article className="flex flex-col gap-y-4">
-              <h1 className="lg:text-5xl md:text-4xl text-3xl whitespace-normal">
-                <HighlightText>Choosing</HighlightText> Us
+              <p className="lg:text-5xl md:text-4xl text-3xl whitespace-normal">
+                <HighlightText>چرا</HighlightText> کوآرمونیا
                 <LoadImage
                   src="/assets/home-page/destination/underline.svg"
                   alt="arrow"
@@ -43,10 +43,9 @@ const Advantage = () => {
                   width={275}
                   className="mt-1.5"
                 />
-              </h1>
+              </p>
               <p className="text-base">
-                We are committed to providing you with the best possible service
-                and value for your money.
+              چرا انتخاب ما برای مهاجرت و پناهندگی بهترین تصمیم شماست؟
               </p>
             </article>
 

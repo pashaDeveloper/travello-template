@@ -21,54 +21,54 @@ const Panel = ({ children }) => {
   const [open, setOpen] = useState(false);
   const routes = [
     {
-      name: "My Profile",
+      name: "پروفایل من",
       path: "/dashboard/my-profile",
       icon: <TbUserEdit className="w-5 h-5" />,
     },
     {
-      name: "Add Rent",
+      name: "وبلاگ",
       path: "/dashboard/add-rent",
       icon: <MdOutlineAddHomeWork className="w-5 h-5" />,
     },
     {
-      name: "List Rents",
+      name: "اخبار",
       path: "/dashboard/list-rents",
       icon: <PiCubeTransparent className="w-5 h-5" />,
     },
     {
-      name: "View Cart",
+      name: "سفارشات",
       path: "/dashboard/view-cart",
       icon: <BsCartCheck className="w-5 h-5" />,
     },
     {
-      name: "View Favorites",
+      name: "علاقه مندی ها",
       path: "/dashboard/view-favorites",
       icon: <MdFavoriteBorder className="w-5 h-5" />,
     },
     {
-      name: "View Purchases",
+      name: "سبد خرید",
       path: "/dashboard/view-purchases",
       icon: <PiCreditCardLight className="w-5 h-5" />,
     },
     {
-      name: "List Buyers",
+      name: "خریداران",
       path: "/dashboard/list-buyers",
       icon: <AiOutlineUserSwitch className="w-5 h-5" />,
     },
     {
-      name: "List Sellers",
+      name: "اپراتورها",
       path: "/dashboard/list-sellers",
       icon: <TbUserShare className="w-5 h-5" />,
     },
     {
       name: (
         <p className="text-black flex flex-row gap-x-2 items-center w-full h-fit">
-          List Users{" "}
+          لیست کاربران{" "}
           <span
             className="border border-cyan-900 text-cyan-900 bg-cyan-100/50 px-1.5 py-0 rounded uppercase"
             style={{ fontSize: "10px" }}
           >
-            admin
+            مدیر
           </span>
         </p>
       ),
@@ -76,7 +76,7 @@ const Panel = ({ children }) => {
       icon: <FiUsers className="w-5 h-5" />,
     },
     {
-      name: "View Reviews",
+      name: "تنظیمات سایت",
       path: "/dashboard/view-reviews",
       icon: <MdOutlineRateReview className="w-5 h-5" />,
     },
@@ -138,7 +138,7 @@ const Panel = ({ children }) => {
 
         <footer className="px-4 py-2 flex justify-center items-center flex-row rounded">
           <p className="text-xs">
-            © {new Date().getFullYear()} Travello eBooking. All rights reserved.
+            © {new Date().getFullYear()} تمامی حقوق این اثر متعلق به شرکت کوآرمونیا می باشد.
           </p>
         </footer>
       </div>

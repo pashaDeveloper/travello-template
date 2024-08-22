@@ -29,9 +29,9 @@ const AdvantageArticle = () => {
           className="border border-primary shadow-lg rounded-full"
         />
       ),
-      title: "Safe, Fun & Unique Experience",
+      title: "تجربه و تخصص",
       description:
-        "Your safety and the amount of fun you have with us is our top priority. You will be treated like family and enjoy a once in a lifetime experience that you will never forget.",
+        "تیم  ما از مشاوران و وکلای با تجربه تشکیل شده است که با قوانین و روندهای مهاجرت و پناهندگی به خوبی آشنا هستند. تجربه و تخصص ما به شما کمک می‌کند تا مراحل پیچیده این فرآیند را با اطمینان و آرامش طی کنید.",
     },
     {
       _id: 2,
@@ -44,9 +44,9 @@ const AdvantageArticle = () => {
           className="border border-primary shadow-lg rounded-full"
         />
       ),
-      title: "Over 10,000 Happy Guests",
+      title: "پشتیبانی شخصی‌سازی شده",
       description:
-        "Don’t just take our word for it. Feel free to read online review from thousands of our happy guests that loves our tours. Our guests always come first.",
+        "خدمات ما کاملاً متناسب با نیازهای خاص شما طراحی شده است. ما به هر مشتری توجه فردی داریم و مشاوره‌های شخصی‌سازی شده‌ای ارائه می‌دهیم که به شما کمک می‌کند بهترین تصمیمات را بگیرید.",
     },
     {
       _id: 3,
@@ -59,17 +59,31 @@ const AdvantageArticle = () => {
           className="border border-primary shadow-lg rounded-full"
         />
       ),
-      title: "All-Inclusive Tours",
+      title: "رویکرد سریع و کارآمد",
       description:
-        "Our tours are 100% stress-free so you can fully enjoy your experience. Once paid you don’t have to worry about being nickel and dimed along the way. Leave your wallet at home.",
+        "ما از روش‌های به‌روز و کارآمد استفاده می‌کنیم تا فرآیندهای مهاجرت و پناهندگی را به سرعت و با دقت پیش ببریم، به‌طوری‌که شما بتوانید سریع‌تر به هدف‌های خود برسید..",
+    },
+    {
+      _id: 4,
+      icon: (
+        <LoadImage
+          src={"/assets/home-page/advantage/star.svg"}
+          alt={"star"}
+          height={60}
+          width={60}
+          className="border border-primary shadow-lg rounded-full"
+        />
+      ),
+      title: "پشتیبانی از ابتدای تا انتهای فرآیند",
+      description:
+        "از مرحله ارزیابی اولیه تا پیگیری نهایی، ما در کنار شما خواهیم بود. تیم ما در هر مرحله از فرآیند به شما کمک می‌کند و از هرگونه چالش و مشکل پیشگیری می‌کند.",
     },
   ];
 
   return (
     <article className="flex flex-col gap-y-8">
       <h2 className="lg:text-4xl md:text-3xl text-2xl">
-        To Explore The New Adventure
-        <LoadImage
+چرا انتخاب ما یک انتخاب ایده آل است        <LoadImage
           src={"/assets/home-page/advantage/line.svg"}
           alt={"line"}
           height={10}

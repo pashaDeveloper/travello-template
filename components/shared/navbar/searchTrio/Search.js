@@ -48,9 +48,9 @@ const Search = () => {
         className="lg:w-1/3 md:w-1/2 w-full z-50"
       >
         <div className="flex flex-col gap-y-4 h-full">
-          <h1 className="text-2xl drop-shadow">
-            Search Your <HighlightText>Destination</HighlightText>
-          </h1>
+          <p className="text-2xl drop-shadow">
+            جستجوی <HighlightText>مطلب مورد نظر</HighlightText>
+          </p>
           <SearchFilter setIsModalOpen={setIsModalOpen} />
         </div>
       </Modal>

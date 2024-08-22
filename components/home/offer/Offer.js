@@ -33,8 +33,8 @@ const Offer = () => {
       <Container>
         <div className="w-full h-full flex flex-col gap-y-12">
           <article className="flex flex-col gap-y-4">
-            <h1 className="lg:text-5xl md:text-4xl text-3xl whitespace-normal">
-              <HighlightText>Offers</HighlightText> Explorer
+            <p className="lg:text-5xl md:text-4xl text-3xl whitespace-normal">
+              <HighlightText>پست های </HighlightText> جدید
               <LoadImage
                 src="/assets/home-page/destination/underline.svg"
                 alt="arrow"
@@ -42,10 +42,9 @@ const Offer = () => {
                 width={275}
                 className="mt-1.5"
               />
-            </h1>
-            <p className="text-base">
-              Promotions, deals, and special offers for you
             </p>
+            <p className="text-base">
+            پست های ما شامل جدیدترین اطلاعات و تغییرات در قوانین مهاجرت و پناهندگی هستند که می‌توانند به شما در تصمیم‌گیری‌های مهم کمک کنند.            </p>
           </article>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
             <LoadImage

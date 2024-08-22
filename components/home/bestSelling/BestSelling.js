@@ -40,8 +40,8 @@ const BestSelling = ({ className }) => {
         <section className="w-full h-full flex flex-col gap-y-12">
           <div className="flex flex-row justify-between items-center">
             <article className="flex flex-col gap-y-4">
-              <h1 className="lg:text-5xl md:text-4xl text-3xl whitespace-normal">
-                <HighlightText>Best</HighlightText> Selling
+              <p className="lg:text-5xl md:text-4xl text-3xl whitespace-normal">
+                <HighlightText>جدید ترین</HighlightText> اخبار
                 <LoadImage
                   src="/assets/home-page/destination/underline.svg"
                   alt="arrow"
@@ -49,10 +49,9 @@ const BestSelling = ({ className }) => {
                   width={275}
                   className="mt-1.5"
                 />
-              </h1>
+              </p>
               <p className="text-base">
-                Here are some of our best selling tours across all of our
-                destinations
+              اخبار ما شامل اطلاعات درباره فرصت‌های شغلی و تحصیلی جدید در کشورهای مختلف است که می‌تواند به شما در یافتن بهترین گزینه‌های موجود کمک کند.
               </p>
             </article>
             <div className="text-primary border-b-2 border-b-transparent hover:border-b-primary transition-all">

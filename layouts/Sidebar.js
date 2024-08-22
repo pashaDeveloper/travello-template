@@ -51,7 +51,7 @@ const Sidebar = ({ routes }) => {
           /> */}
           <article className="flex flex-col gap-y-0.5">
             <h2 className="line-clamp-1 text-base">{user?.name}</h2>
-            <span className="text-xs">Logout</span>
+            <span className="text-xs">خروج</span>
           </article>
         </div>
         <Link
@@ -59,7 +59,7 @@ const Sidebar = ({ routes }) => {
           className="flex flex-row gap-x-2 items-center px-4 py-2 hover:bg-primary hover:text-white transition-colors rounded text-sm"
         >
           <IoHomeOutline className="w-4 h-4" />
-          Home
+          خانه
         </Link>
       </div>
     </div>

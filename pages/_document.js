@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" >
       <Head>
         {/* Primary Meta Tags  */}
         <meta
@@ -85,7 +85,7 @@ export default function Document() {
           content="https://res.cloudinary.com/dho0rpn5a/image/upload/v1692935077/samples/travello_template.png"
         />
       </Head>
-      <body>
+      <body dir="rtl">
         <Main />
         <NextScript />
       </body>

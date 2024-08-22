@@ -1,9 +1,7 @@
 
-
 import Container from "@/components/shared/container/Container";
 import HighlightText from "@/components/shared/highlightText/HighlightText";
 import LoadImage from "@/components/shared/image/LoadImage";
-import Image from "next/image";
 import React, { useEffect, useMemo } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { RiChatQuoteFill } from "react-icons/ri";
@@ -17,6 +15,7 @@ const animation = { duration: 50000, easing: (t) => t };
 const Reviews = ({ className }) => {
   const { isLoading, data, error } = useGetAllReviewsQuery();
   const reviews = useMemo(() => data?.data || [], [data]);
+
   console.log(reviews);
 
   useEffect(() => {
@@ -45,11 +44,9 @@ const Reviews = ({ className }) => {
     created(s) {
       s.moveToIdx(5, true, animation);
     },
-    updated(s) {
-      s.moveToIdx(s.track.details.abs + 5, true, animation);
-    },
+    
     animationEnded(s) {
-      s.moveToIdx(s.track.details.abs + 5, true, animation);
+      s.moveToIdx(s.track.details.abs() + 5, true, animation);
     },
     breakpoints: {
       "(max-width: 768px)": {

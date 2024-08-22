@@ -87,13 +87,13 @@ const SearchFilter = ({ setIsModalOpen }) => {
           name="search"
           id="search"
           className="w-full rounded border-1 border-primary text-sm"
-          placeholder="Enter your destination here..."
+          placeholder="دنبال چی هستی..."
           onChange={handleSearch}
           autoComplete="off"
         />
         <div className="flex flex-col gap-y-2.5 h-full overflow-y-auto">
           {filteredTravels.length === 0 ? (
-            <p className="text-sm text-red-500">No rents found!</p>
+            <p className="text-sm text-red-500">چیزی یافت نشد</p>
           ) : (
             filteredTravels.map(({ _id, title, summary, location, price }) => {
               const highlightedTitle = highlightMatch(title, searchTerm);

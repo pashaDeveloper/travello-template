@@ -73,27 +73,27 @@ const Gallery = () => {
 
   const items = [
     {
-      title: "City",
+      title: "ترکیه",
       images: 17,
     },
     {
-      title: "Foods",
+      title: "کانادا",
       images: 27,
     },
     {
-      title: "Hotel",
+      title: "ازدواج",
       images: 21,
     },
     {
-      title: "Forest",
+      title: "قرارداها",
       images: 33,
     },
     {
-      title: "Mountains",
+      title: "سمینارها",
       images: 30,
     },
     {
-      title: "Sea Beaches",
+      title: "درباره ما",
       images: 31,
     },
   ];
@@ -108,8 +108,8 @@ const Gallery = () => {
         <section className="w-full h-full flex flex-col gap-y-12">
           <div className="flex flex-col gap-y-12">
             <article className="flex flex-col gap-y-4">
-              <h1 className="lg:text-5xl md:text-4xl text-3xl whitespace-normal">
-                <HighlightText>Gallery</HighlightText> Explorer
+              <p className="lg:text-5xl md:text-4xl text-3xl whitespace-normal">
+                <HighlightText>گالری</HighlightText> تصاویر
                 <LoadImage
                   src="/assets/home-page/destination/underline.svg"
                   alt="arrow"
@@ -117,10 +117,9 @@ const Gallery = () => {
                   width={275}
                   className="mt-1.5"
                 />
-              </h1>
+              </p>
               <p className="text-base">
-                Featured photos based on foods, sea-beaches, mountains, forest,
-                hotels and so on.
+              با مرور گالری تصاویر، شما با کیفیت خدمات و راهکارهای ما آشنا می‌شوید و می‌توانید ببینید که چگونه ما به مشتریان خود ارزش افزوده می‌دهیم.
               </p>
             </article>
           </div>

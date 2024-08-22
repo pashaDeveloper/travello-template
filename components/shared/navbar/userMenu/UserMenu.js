@@ -21,7 +21,7 @@ import MobileMenu from "../mobileMenu/MobileMenu";
 
 const UserMenu = () => {
   return (
-    <div className="flex flex-row items-center gap-x-4">
+    <div className="flex flex-row items-center gap-x-4 z-[9998]">
       <Search />
       <Favorites />
       <Cart />
